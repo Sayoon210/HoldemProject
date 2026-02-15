@@ -1,0 +1,50 @@
+.chip {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: grab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 0.8rem;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    position: relative;
+    box-shadow:
+        0 4px 0 rgba(0, 0, 0, 0.4),
+        0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.2s;
+}
+
+.chip:active {
+    cursor: grabbing;
+}
+
+/* Different chip colors based on value */
+.red {
+    background: radial-gradient(circle at 30% 30%, #ff4d4d, #b30000);
+    border: 3px dashed rgba(255, 255, 255, 0.4);
+}
+
+.blue {
+    background: radial-gradient(circle at 30% 30%, #4d4dff, #0000b3);
+    border: 3px dashed rgba(255, 255, 255, 0.4);
+}
+
+.green {
+    background: radial-gradient(circle at 30% 30%, #4dff4d, #00b300);
+    border: 3px dashed rgba(255, 255, 255, 0.4);
+}
+
+/* Inner circle for that classic poker chip look */
+.innerCircle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

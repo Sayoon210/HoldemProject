@@ -106,33 +106,33 @@
 }
 
 .pos1 {
-    top: 80%;
-    left: 120px;
+    top: 85%;
+    left: 80px;
     transform: translateY(-50%) rotateZ(65deg);
 }
 
 .pos2 {
-    top: 20%;
-    left: 120px;
+    top: 15%;
+    left: 80px;
     transform: translateY(-50%) rotateZ(115deg);
 }
 
 .pos3 {
-    top: -25px;
+    top: -45px;
     /* On the top edge */
     left: 50%;
     transform: translateX(-50%) rotateZ(180deg);
 }
 
 .pos4 {
-    top: 20%;
-    right: 120px;
+    top: 15%;
+    right: 80px;
     transform: translateY(-50%) rotateZ(-115deg);
 }
 
 .pos5 {
-    top: 80%;
-    right: 120px;
+    top: 85%;
+    right: 80px;
     transform: translateY(-50%) rotateZ(-65deg);
 }
 

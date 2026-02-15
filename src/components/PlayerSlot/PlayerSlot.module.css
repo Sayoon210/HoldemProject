@@ -98,6 +98,13 @@
     z-index: 5;
 }
 
+.chipSimulation {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .tokenLabel {
     color: var(--gold);
     font-size: 0.9rem;

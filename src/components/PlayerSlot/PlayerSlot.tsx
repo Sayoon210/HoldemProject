@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './PlayerSlot.module.css';
 import Card from '../Card/Card';
+import Chip from '../Chip/Chip';
 
 interface PlayerSlotProps {
     name: string;
@@ -141,6 +142,12 @@ const PlayerSlot: React.FC<PlayerSlotProps> = ({
             </div>
 
             <div className={styles.playerInfo}>
+                {/* Chip Simulation Area */}
+                {draggableCards && !isFolded && (
+                    <div className={styles.chipSimulation}>
+                        <Chip value={100} color="red" />
+                    </div>
+                )}
                 <span className={styles.tokenLabel}>
                     {isDealer && '🃏 '} {tokens.toLocaleString()}
                 </span>
