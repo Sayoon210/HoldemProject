@@ -1,0 +1,39 @@
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --table-green: #0a4d2c;
+  --table-border: #3d2b1f;
+  --gold: #ffd700;
+  --accent-blue: #00d2ff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Base Utility for the spotlight feel */
+.spotlight-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, rgba(30, 100, 60, 0.45) 0%, rgba(0, 0, 0, 1) 65%);
+  box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.9);
+}
