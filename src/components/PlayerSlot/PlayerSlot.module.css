@@ -8,6 +8,19 @@
     /* Increased z-index for interaction */
 }
 
+.handWrapper {
+    position: relative;
+    height: 120px;
+    width: 180px;
+    /* Expanded to cover side-by-side cards (80+1+80 = 161px) */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    pointer-events: auto;
+    background: transparent;
+    /* Solid hit area */
+}
+
 .hand {
     display: flex;
     justify-content: center;
@@ -16,18 +29,65 @@
     position: relative;
     z-index: 10;
     perspective: 1200px;
+    /* Let events pass to wrapper or handle specifically */
 }
 
 .cardContainer {
     width: 80px;
     height: 111px;
     margin: 0 -35px;
-    /* Overlap cards for a bundled look */
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Default bundled overlap */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     justify-content: center;
     align-items: center;
     filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.5));
+}
+
+.cardContainer.upright {
+    margin: 0 1px;
+    /* Tighter side-by-side spacing */
+    transform: rotate(0deg) translateY(0) !important;
+}
+
+.slot.folded .tokenLabel {
+    opacity: 0.3;
+    filter: grayscale(1);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.foldTooltip {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 900;
+    pointer-events: none;
+    z-index: 20;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateX(-50%) scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 0.8;
+    }
 }
 
 .playerInfo {

@@ -13,6 +13,8 @@
     /* Enlarged */
     height: 500px;
     /* Enlarged */
+    margin-top: -60px;
+    /* Shift up */
     background-color: var(--table-green);
     background-image:
         radial-gradient(circle at center, rgba(34, 139, 34, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
@@ -75,6 +77,8 @@
     width: 950px;
     height: 500px;
     transform: translate(-50%, -50%);
+    margin-top: -60px;
+    /* ALIGN WITH TABLE SHIFT */
     pointer-events: none;
     z-index: 2;
 }
@@ -93,46 +97,43 @@
     color: var(--gold);
 }
 
-/* Positions moved further inward with rotation to face center */
+/* Positions relative to playerContainer which now aligns with table felt */
 .pos0 {
-    bottom: 40px;
+    bottom: -150px;
+    /* Deep in the bottom gap, below the table */
     left: 50%;
     transform: translateX(-50%) rotateZ(0deg);
 }
 
-/* Hero - Faces Up */
 .pos1 {
-    top: 75%;
-    left: 100px;
-    transform: translateY(-50%) rotateZ(70deg);
+    top: 80%;
+    left: 120px;
+    transform: translateY(-50%) rotateZ(65deg);
 }
 
-/* Bottom Left - Angled In */
 .pos2 {
-    top: 25%;
-    left: 100px;
-    transform: translateY(-50%) rotateZ(110deg);
+    top: 20%;
+    left: 120px;
+    transform: translateY(-50%) rotateZ(115deg);
 }
 
-/* Top Left - Angled In */
 .pos3 {
-    top: 40px;
+    top: -25px;
+    /* On the top edge */
     left: 50%;
     transform: translateX(-50%) rotateZ(180deg);
 }
 
-/* Top Center - Faces Down */
 .pos4 {
-    top: 25%;
-    right: 100px;
-    transform: translateY(-50%) rotateZ(-110deg);
+    top: 20%;
+    right: 120px;
+    transform: translateY(-50%) rotateZ(-115deg);
 }
 
-/* Top Right - Angled In */
 .pos5 {
-    top: 75%;
-    right: 100px;
-    transform: translateY(-50%) rotateZ(-70deg);
+    top: 80%;
+    right: 120px;
+    transform: translateY(-50%) rotateZ(-65deg);
 }
 
 /* Bottom Right - Angled In */
