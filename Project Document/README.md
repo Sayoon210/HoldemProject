@@ -8,6 +8,7 @@
 - [Technical Spec](./tech_spec.md): 기술 스택 및 아키텍처
 - [Design Spec](./design_spec.md): UI/UX 및 디자인 가이드
 - [Gameplay Spec](./gameplay_spec.md): 상호작용 및 애니메이션/사운드
+- [Asset Requirements](./asset_requirements.md): 필요한 그래픽/사운드 리소스 목록
 
 ## How to use
 (프로젝트가 구체화되면 실행 방법 등을 적을 예정입니다.)

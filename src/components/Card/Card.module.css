@@ -1,33 +1,36 @@
 .card {
-    width: 60px;
-    height: 85px;
-    background: white;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    font-weight: bold;
-    font-size: 1.2rem;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 128px;
+    /* Using original asset width */
+    height: 178px;
+    /* Using original asset height */
+    background-size: 1664px 712px;
+    /* 13 columns * 128, 4 rows * 178 */
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     position: relative;
     user-select: none;
+    background-color: white;
+    /* Fallback */
+    flex-shrink: 0;
+
+    /* Scale down for UI fitting while keeping original coordinates */
+    transform-origin: center center;
+    scale: 0.6;
+    /* Slightly larger for easier dragging */
+    cursor: grab;
 }
 
 .back {
-    background: linear-gradient(135deg, #1a1a1a 25%, #2a2a2a 25%, #2a2a2a 50%, #1a1a1a 50%, #1a1a1a 75%, #2a2a2a 75%, #2a2a2a 100%);
-    background-size: 10px 10px;
-    border: 2px solid #ccc;
+    background-size: cover;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.rank {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    font-size: 0.8rem;
-}
-
-.suit {
-    font-size: 2rem;
+/* Ensure parents don't collapse when scaled down */
+.card-container {
+    width: 64px;
+    height: 89px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
